@@ -11,6 +11,7 @@ const App = () => {
   });
   const [lastBooking, setLastBooking] = useState(null);
   const [updatedBooking, setUpdatedBooking] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     if (selectedMovie && selectedSlot) {
@@ -19,12 +20,15 @@ const App = () => {
   }, [selectedMovie, selectedSlot]);
 
   const fetchLastBooking = async (movie, slot) => {
+    setLoading(true);
     try {
-      const response = await fetch(`http://localhost:8080/api/booking?movie=${movie}&slot=${slot}`);
+      const response = await fetch(`https://bookmyshow-backend-c36h.onrender.com/api/booking?movie=${movie}&slot=${slot}`);
       const data = await response.json();
       setLastBooking(data);
     } catch (error) {
       console.error("Error fetching last booking:", error);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -51,7 +55,7 @@ const App = () => {
     };
 
     try {
-      const response = await fetch("http://localhost:8080/api/booking", {
+      const response = await fetch("https://bookmyshow-backend-c36h.onrender.com/api/booking", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -122,7 +126,12 @@ const App = () => {
 
       <div className="last-order">
         <h4>Last Booking Details:</h4>
-        {lastBooking && lastBooking.seats ? (
+        {loading ? (
+          <div className="spinner-container">
+            <div className="spinner"></div>
+            <p>Fetching Previous Data</p>
+          </div>
+        ) : lastBooking && lastBooking.seats ? (
           <div>
             <p>Movie: {lastBooking.movie}</p>
             <p>Slot: {lastBooking.slot}</p>
