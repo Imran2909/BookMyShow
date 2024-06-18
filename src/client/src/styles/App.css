@@ -1,0 +1,257 @@
+.movie-column, .seat-column, .slot-column {
+    display: flex;
+    margin: 5px;
+    color: rgb(0, 0, 0);
+    border: 1px rgb(0, 0, 0) ridge;
+    padding: 17px 15px;
+    line-height: 1px;
+    border-radius: 5px;
+    height: 40px;
+    font-size: 17px;
+    font-weight: 500;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.movie-row, .seat-row, .slot-row {
+    border-radius: 10px;
+    border: 1px black ridge;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.seat-column {
+    min-width: 100px;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.book-button button {
+    text-align: center;
+    border-radius: 10px;
+    font-size: 1em;
+    color: white;
+    background: rgb(44, 209, 88);
+    background: -moz-linear-gradient(233deg, rgba(44, 209, 88, 1) 0%, rgba(44, 108, 224, 1) 100%);
+    background: -webkit-linear-gradient(233deg, rgba(44, 209, 88, 1) 0%, rgba(44, 108, 224, 1) 100%);
+    background: linear-gradient(233deg, rgba(44, 209, 88, 1) 0%, rgba(44, 108, 224, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2cd158", endColorstr="#2c6ce0", GradientType=1);
+    padding: 5px 15px;
+    font-weight: 500;
+}
+
+.movie-column-selected, .seat-column-selected, .slot-column-selected {
+    background: rgb(211, 115, 115);
+}
+
+input {
+    width: 50px;
+    border-color: rgb(196, 196, 196);
+    border-width: 1px;
+}
+
+.last-order {
+    border-radius: 10px;
+    border: 1px black ridge;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    width: 30%;
+    margin-top: 74px;
+    height: auto;
+}
+
+.updated-order {
+    border-radius: 10px;
+    border: 1px black ridge;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    width: 30%;
+    margin-top: 20px; /* Add margin-top to separate it from the last-order */
+    height: auto;
+}
+
+.main {
+    display: flex;
+    /* flex-direction: column; Ensure the flex direction is column */
+    align-items: center; /* Center the content */
+    padding: 30px;
+}
+
+.container {
+    padding: 20px;
+}
+
+.movie-column, .seat-column, .slot-column {
+    display: inline-block;
+    margin: 5px;
+    color: rgb(0, 0, 0);
+    border: 1px rgb(0, 0, 0) ridge;
+    padding: 17px 15px;
+    line-height: 1px;
+    border-radius: 5px;
+}
+
+.movie-row, .seat-row, .slot-row {
+    border-radius: 10px;
+    border: 1px black ridge;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.seat-column {
+    min-width: 100px;
+    text-align: center;
+    padding-bottom: 15px;
+    height: 70px;
+}
+
+.num {
+    margin-top: 8px;
+}
+
+.book-button button {
+    text-align: center;
+    border-radius: 10px;
+    font-size: 1em;
+    color: white;
+    background: rgb(44, 209, 88);
+    background: -moz-linear-gradient(233deg, rgba(44, 209, 88, 1) 0%, rgba(44, 108, 224, 1) 100%);
+    background: -webkit-linear-gradient(233deg, rgba(44, 209, 88, 1) 0%, rgba(44, 108, 224, 1) 100%);
+    background: linear-gradient(233deg, rgba(44, 209, 88, 1) 0%, rgba(44, 108, 224, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2cd158", endColorstr="#2c6ce0", GradientType=1);
+    padding: 5px 15px;
+    font-weight: 500;
+}
+
+.movie-column-selected, .seat-column-selected, .slot-column-selected {
+    background: rgb(211, 115, 115);
+}
+
+input {
+    width: 50px;
+    border-color: rgb(196, 196, 196);
+    border-width: 1px;
+}
+
+.main {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.movie-row, .slot-row, .seat-row {
+    margin-bottom: 20px;
+}
+
+.movie-column, .slot-column {
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.movie-column-selected, .slot-column-selected {
+    background-color: #d3d3d3;
+}
+
+.seat-column {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.book-button {
+    margin-top: 20px;
+}
+
+.last-order, .updated-order {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .container {
+        width: 90%;
+    }
+    .movie-column, .slot-column, .seat-column {
+        font-size: 15px;
+        padding: 15px 10px;
+    }
+    .book-button button {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+    .last-order, .updated-order {
+        width: 80%;
+    }
+}
+
+@media (max-width: 992px) {
+    .main{
+        display:flex;
+        flex-direction:column;
+    }
+    .container {
+        width: 95%;
+    }
+    .movie-column, .slot-column, .seat-column {
+        font-size: 14px;
+        padding: 12px 8px;
+    }
+    .book-button button {
+        padding: 6px 12px;
+        font-size: 0.85em;
+    }
+    .last-order, .updated-order {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .main{
+        display:flex;
+        flex-direction:column;
+    }
+    .container {
+        width: 100%;
+    }
+    .movie-column, .slot-column, .seat-column {
+        font-size: 13px;
+        padding: 10px 5px;
+    }
+    .book-button button {
+        padding: 5px 10px;
+        font-size: 0.8em;
+    }
+    .last-order, .updated-order {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .main{
+        display:flex;
+        flex-direction:column;
+    }
+    .movie-row, .slot-row, .seat-row {
+        flex-direction: column;
+        align-items: center;
+    }
+    .movie-column, .slot-column, .seat-column {
+        width: 100%;
+        text-align: center;
+    }
+    .book-button button {
+        width: 100%;
+        font-size: 0.75em;
+        padding: 5px 0;
+    }
+}
